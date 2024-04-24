@@ -2,27 +2,67 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-23T14:48:53 EDT" name="Default suite" finished-at="2024-04-23T14:49:11 EDT" duration-ms="18469">
+  <suite started-at="2024-04-24T11:22:45 EDT" name="Default suite" finished-at="2024-04-24T11:23:23 EDT" duration-ms="38269">
     <groups>
     </groups>
-    <test started-at="2024-04-23T14:48:53 EDT" name="Default test" finished-at="2024-04-23T14:49:11 EDT" duration-ms="18469">
-      <class name="testPkg.ConditionOfUsePageTest">
-        <test-method is-config="true" signature="loadBrowser()[pri:0, instance:testPkg.ConditionOfUsePageTest@342c38f8]" started-at="2024-04-23T14:48:53 EDT" name="loadBrowser" finished-at="2024-04-23T14:49:04 EDT" duration-ms="11591" status="PASS">
+    <test started-at="2024-04-24T11:22:45 EDT" name="Default test" finished-at="2024-04-24T11:23:23 EDT" duration-ms="38269">
+      <class name="testPkg.LoginTest">
+        <test-method is-config="true" signature="loadBrowser()[pri:0, instance:testPkg.LoginTest@342c38f8]" started-at="2024-04-24T11:22:45 EDT" name="loadBrowser" finished-at="2024-04-24T11:23:11 EDT" duration-ms="25912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadBrowser -->
-        <test-method signature="conditionsOfUsePageHeaderTest()[pri:0, instance:testPkg.ConditionOfUsePageTest@342c38f8]" started-at="2024-04-23T14:49:04 EDT" name="conditionsOfUsePageHeaderTest" finished-at="2024-04-23T14:49:05 EDT" duration-ms="546" status="FAIL">
+        <test-method signature="negativeLoginTest(java.lang.String,java.lang.String)[pri:0, instance:testPkg.LoginTest@342c38f8]" started-at="2024-04-24T11:23:11 EDT" name="negativeLoginTest" data-provider="negative login data" finished-at="2024-04-24T11:23:14 EDT" duration-ms="2973" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLoginTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testPkg.LoginTest@342c38f8]" started-at="2024-04-24T11:23:14 EDT" name="closeBrowser" finished-at="2024-04-24T11:23:14 EDT" duration-ms="770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="loadBrowser()[pri:0, instance:testPkg.LoginTest@342c38f8]" started-at="2024-04-24T11:23:14 EDT" name="loadBrowser" finished-at="2024-04-24T11:23:21 EDT" duration-ms="6408" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadBrowser -->
+        <test-method signature="positiveLoginTest(java.lang.String,java.lang.String)[pri:0, instance:testPkg.LoginTest@342c38f8]" started-at="2024-04-24T11:23:21 EDT" name="positiveLoginTest" data-provider="positive login data" finished-at="2024-04-24T11:23:22 EDT" duration-ms="920" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test12]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test@12]]>
+              </value>
+            </param>
+          </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [true] but found [false]]]>
+              <![CDATA[expected [Enter your userName and password correct
+                  ] but found [Enter your userName and password correct]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: expected [Enter your userName and password correct
+                  ] but found [Enter your userName and password correct]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at org.testng.Assert.assertTrue(Assert.java:67)
-at testPkg.ConditionOfUsePageTest.conditionsOfUsePageHeaderTest(ConditionOfUsePageTest.java:28)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testPkg.LoginTest.positiveLoginTest(LoginTest.java:37)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -56,24 +96,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- conditionsOfUsePageHeaderTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testPkg.ConditionOfUsePageTest@342c38f8]" started-at="2024-04-23T14:49:05 EDT" name="closeBrowser" finished-at="2024-04-23T14:49:05 EDT" duration-ms="621" status="PASS">
+        </test-method> <!-- positiveLoginTest -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testPkg.LoginTest@342c38f8]" started-at="2024-04-24T11:23:22 EDT" name="closeBrowser" finished-at="2024-04-24T11:23:23 EDT" duration-ms="1147" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="loadBrowser()[pri:0, instance:testPkg.ConditionOfUsePageTest@342c38f8]" started-at="2024-04-23T14:49:05 EDT" name="loadBrowser" finished-at="2024-04-23T14:49:08 EDT" duration-ms="2432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadBrowser -->
-        <test-method signature="conditionsOfUsePageHeaderTxtTest()[pri:0, instance:testPkg.ConditionOfUsePageTest@342c38f8]" started-at="2024-04-23T14:49:08 EDT" name="conditionsOfUsePageHeaderTxtTest" finished-at="2024-04-23T14:49:11 EDT" duration-ms="2632" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- conditionsOfUsePageHeaderTxtTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testPkg.ConditionOfUsePageTest@342c38f8]" started-at="2024-04-23T14:49:11 EDT" name="closeBrowser" finished-at="2024-04-23T14:49:11 EDT" duration-ms="462" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- testPkg.ConditionOfUsePageTest -->
+      </class> <!-- testPkg.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

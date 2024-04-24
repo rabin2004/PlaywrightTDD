@@ -13,7 +13,7 @@ public class BaseMain {
 	public Playwright playwright;
 	public Browser browser;
 	public static Page page;
-	Properties prop;
+	public Properties prop;
 
 	public BaseMain() {
 		try {
@@ -35,7 +35,7 @@ public class BaseMain {
 		option.setHeadless(false);
 		browser = playwright.chromium().launch(option);
 		page = browser.newPage();
-		page.navigate("https://www.amazon.com");
+		page.navigate(prop.getProperty("testURL"));
 	}
 	
 	public void tearDown() {

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testPkg.ConditionOfUsePageTest">
+      <class name="testPkg.LoginTest">
         <methods>
-          <include name="conditionsOfUsePageHeaderTest"/>
           <include name="closeBrowser"/>
+          <include name="positiveLoginTest" invocation-numbers="0"/>
           <include name="loadBrowser"/>
         </methods>
-      </class> <!-- testPkg.ConditionOfUsePageTest -->
+      </class> <!-- testPkg.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
